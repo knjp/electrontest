@@ -2,27 +2,35 @@
 <html>
     <head>
         <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre.min.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
         <title>Sound Test</title>
     </head>
-    <body>
+    <body onload="putTime()">
         <H1>Sound Testing!!</H1>
         <div>
-            <p align="center" id='timep'> This is a test</p>
+            <p align="center" id='infortime'> Date/Time</p>
         </div>
         <div>
+            <p align="center" id='timep'> 0</p>
+        </div>
+        <div class='tbutton'>
+            <span class='tbutton'>
             <button type="button" id="b30" value="30" class='btime'>30</button>
-        </div>
-        <div>
+            </span>
+            <span class='tbutton'>
             <button type="button" id="b60" value="60" class='btime'>60</button>
+            </span>
         </div>
-        <div>
+        <div class='tbutton'>
+            <span class='tbutton'>
             <button type="button" id="b120" value="120" class='btime'>120</button>
-        </div>
-        <div>
+            </span>
+            <span class='tbutton'>
             <button type="button" id="b240" value="240" class='btime'>240</button>
+            </span>
         </div>
-        <div>
-            <button type="button" id="qb">Quit</button>
+        <div class='tbutton'>
+            <button type="button" id="qb" class='btime'>Quit</button>
         </div>
         <script type="text/javascript" src="index.js"></script>
     </body>

@@ -1,0 +1,18 @@
+p#timep {
+    font-size: 1.6em;
+}
+
+p#infortime {
+    font-size: 2.0em;
+}
+.tbutton {
+    width: 40%;
+    height: 100px;
+    display: inline;
+}
+
+button.btime {
+    font-size: 1.4em;
+    width: 40%;
+    height: 100px;
+}
