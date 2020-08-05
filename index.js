@@ -6,21 +6,31 @@
 // const log = require('electron-log')
 'use strict'
 
+var timecount = 0
+
 function putTime(){
     var now = new Date()
     var year = now.getFullYear()
     var month = now.getMonth + 1
     const p = document.getElementById('infortime')
-    p.innerHTML = now
+    p.innerHTML = now.toLocaleTimeString()
+    if(timecount > 0){
+        timecount = timecount -1
+    }
+    const c = document.getElementById('timep')
+    c.innerHTML = timecount
+}
+
+
+
+function timerInit(){
+    putTime();
+    setInterval('putTime()', 1000)
 }
 
 function timeset(value){
-    const p = document.getElementById('timep')
-    p.innerHTML = value
+    timecount = value
 
-    var now = new Date().getTime()
-    const q = document.getElementById('infortime')
-    q.innerHTML = now
 }
 
 const button = document.getElementById('qb')
@@ -34,7 +44,9 @@ const bt = document.getElementsByClassName('btime')
 for(var $i = 0; $i < bt.length; $i++){
     const cbutton = bt[$i]
     cbutton.addEventListener('click', function(clickEvent) {
+        timecount = cbutton.getAttribute('value') 
+        timecount = Number(timecount) + 5
         const p = document.getElementById('timep')
-        p.innerHTML = cbutton.getAttribute('value')
+        p.innerHTML = timecount
     })
 }
