@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
+    "build": "electron-packager . electron-sound --platform=linux --arch=x64 --overwrite"
   },
   "author": "",
   "license": "ISC",
