@@ -60,6 +60,12 @@ button.addEventListener('click', function(clickEvent) {
     window.close()
 })
 
+const bclear = document.getElementById('clear')
+bclear.addEventListener('click', function(clickEvent) {
+    timecount = 0
+    rnum = 0
+})
+
 const bt = document.getElementsByClassName('btime')
 for(var $i = 0; $i < bt.length; $i++){
     const cbutton = bt[$i]

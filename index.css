@@ -11,7 +11,7 @@ p#infortime {
     display: inline;
 }
 
-button.btime, button.btime4 {
+button.btime, button.btime4, button.stime {
     font-size: 1.4em;
     width: 18%;
     height: 50px;
