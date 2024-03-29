@@ -17,6 +17,8 @@ function putTime(){
                 window.requires.onbeep()
             }
         }
+    }else{
+        timecount = 0
     }
     const c = document.getElementById('timep')
     c.innerHTML = timecount
@@ -55,6 +57,7 @@ for(var $i = 0; $i < bt.length; $i++){
     cbutton.addEventListener('click', function(clickEvent) {
         timecount = cbutton.getAttribute('value') 
         timecount = Number(timecount) + 2
+        lasttime = 0
         rnum = 1
         const p = document.getElementById('timep')
         p.innerHTML = timecount
