@@ -1,23 +1,6 @@
-// 'use strict'
-
-const { Reader } = require("wav")
-const Speaker = require("speaker")
-
-// const electron = require('electron')
-//const { app } = require('electron')
-//const clipboard = electron.clipboard
-// const log = require('electron-log')
-// 'use strict'
-
 var timecount = 0
 var lasttime = 0
 var rnum = 0
-
-// var fs = require('fs')
-//var wav = require('wav')
-//var Speaker = require('speaker')
-//var file = fs.createReadStream('beep.wav')
-
 
 function putTime(){
     var now = new Date()
@@ -31,7 +14,7 @@ function putTime(){
             if(timecount == 0){
                 rnum = rnum - 1 
                 timecount = lasttime
-                window.onbeep()
+                window.requires.onbeep()
             }
         }
     }

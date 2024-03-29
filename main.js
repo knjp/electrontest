@@ -1,7 +1,8 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
-function createWindow(){
+//function createWindow(){
+const createWindow = () => {
     const mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
@@ -22,3 +23,7 @@ app.whenReady().then(()=>{
 app.on('window-all-closed', function(){
     if(process.platform != 'darwin') app.quit()
 })
+
+
+// app.commandLine.appendSwitch('no-sandox');
+// app.commandLine.appendSwitch('in-progress-gpu');

@@ -1,21 +1,19 @@
 {
   "name": "electron-sound",
   "version": "1.0.0",
+  "author": "",
   "description": "",
   "main": "main.js",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "build": "electron-packager . electron-sound --platform=linux --arch=x64 --overwrite"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "electron": "^9.1.1",
-    "electron-packager": "^15.0.0",
-    "net": "^1.0.2",
-    "npm": "^6.14.7",
-    "speaker": "^0.5.2",
+  "devDependencies": {
+    "electron": "^24.1.2",
+    "electron-rebuild": "^3.2.9",
+    "speaker": "^0.5.4",
     "wav": "^1.0.2"
   }
 }
