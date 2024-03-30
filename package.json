@@ -1,18 +1,19 @@
 {
-  "name": "electron-sound",
-  "version": "1.0.0",
-  "author": "",
-  "description": "",
+  "name": "electrontest",
+  "version": "0.0.1",
+  "description": "Test of electron",
   "main": "main.js",
-  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
-    "build": "electron-packager . electron-sound --platform=linux --arch=x64 --overwrite"
+    "start": "electron ."
   },
-  "devDependencies": {
-    "electron": "^24.1.2",
+  "author": "Kiyoshi Nishikawa",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^29.1.6",
     "electron-rebuild": "^3.2.9",
+    "net": "^1.0.2",
+    "node-gyp": "^10.1.0",
     "speaker": "^0.5.4",
     "wav": "^1.0.2"
   }
