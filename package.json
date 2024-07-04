@@ -10,11 +10,12 @@
   "author": "Kiyoshi Nishikawa",
   "license": "ISC",
   "dependencies": {
-    "electron": "^29.2.0",
+    "electrn": "^0.0.1-security",
+    "electron": "^30.0.9",
     "electron-rebuild": "^3.2.9",
     "net": "^1.0.2",
     "node-gyp": "^10.1.0",
-    "speaker": "^0.5.4",
+    "speaker": "^0.5.5",
     "wav": "^1.0.2"
   }
 }
