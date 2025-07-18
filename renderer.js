@@ -76,3 +76,24 @@ for(var $i = 0; $i < bt4.length; $i++){
         p.innerHTML = timecount
     })
 }
+
+const audioContext = new AudioContext();
+const gainNode = audioContext.createGain();
+const volumeSlider = document.getElementById('volume');
+
+volumeSlider.addEventListener('input', () => {
+  gainNode.gain.value = volumeSlider.value;
+});
+
+document.getElementById('playtest').addEventListener('click', async () => {
+  const response = await fetch('gameover.wav');
+  const arrayBuffer = await response.arrayBuffer();
+  const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+
+  const source = audioContext.createBufferSource();
+  source.buffer = audioBuffer;
+
+  source.connect(gainNode).connect(audioContext.destination);
+  source.start();
+});
+
