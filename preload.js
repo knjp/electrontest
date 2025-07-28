@@ -15,3 +15,16 @@ contextBridge.exposeInMainWorld(
         file.pipe(reader)
     }
 })
+
+//const { contextBridge, ipcRenderer } = require('electron');
+//const fs = require('fs');
+const path = require('path');
+
+contextBridge.exposeInMainWorld('audioAPI', {
+  loadSound: (fileName) => {
+    const fullPath = path.join(__dirname, fileName);
+    const fileData = fs.readFileSync(fullPath);
+    const arrayBuffer = fileData.buffer.slice(fileData.byteOffset, fileData.byteOffset + fileData.byteLength);
+    return arrayBuffer;
+  }
+});

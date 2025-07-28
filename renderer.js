@@ -14,7 +14,8 @@ function putTime(){
             if(timecount == 0){
                 rnum = rnum - 1 
                 timecount = lasttime
-                window.requires.onbeep()
+                //window.requires.onbeep()
+                soundBeep()
             }
         }
     }else{
@@ -25,8 +26,6 @@ function putTime(){
     const d = document.getElementById('repnum')
     d.innerHTML = rnum
 }
-
-
 
 function timerInit(){
     putTime();
@@ -97,3 +96,13 @@ document.getElementById('playtest').addEventListener('click', async () => {
   source.start();
 });
 
+
+async function soundBeep() {
+  const response = await fetch('beep.wav');
+  const arrayBuffer = await response.arrayBuffer();
+  const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+  const source = audioContext.createBufferSource();
+  source.buffer = audioBuffer;
+  source.connect(gainNode).connect(audioContext.destination);
+  source.start();
+}
